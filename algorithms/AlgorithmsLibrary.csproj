@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{820E9ABA-CFAD-442C-B72E-759AEB975280}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Algorithms</RootNamespace>
+    <RootNamespace>AlgorithmsLibrary</RootNamespace>
     <AssemblyName>algorithms</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
   </PropertyGroup>

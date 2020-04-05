@@ -35,16 +35,16 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\algorithms\algorithms.csproj">
-      <Project>{820E9ABA-CFAD-442C-B72E-759AEB975280}</Project>
-      <Name>AlgorithmsLibrary</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="DataStructures\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataStructures\SparseTableTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Algorithms\AlgorithmsLibrary.csproj">
+      <Project>{820E9ABA-CFAD-442C-B72E-759AEB975280}</Project>
+      <Name>AlgorithmsLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
