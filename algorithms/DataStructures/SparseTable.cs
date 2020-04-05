@@ -11,6 +11,9 @@ namespace algorithms.Algorithms.DataStructures
         Multiply,
     }
 
+    /*
+     * Doc
+    */
     public class SparseTable
     {
         // The number of elements in the input array
@@ -19,6 +22,7 @@ namespace algorithms.Algorithms.DataStructures
         // The maximum power of 2 i.e. floor(log2(n))
         private readonly int P;
 
+        // The operation this instance supports
         private readonly Operation operation;
 
         private int[] log2;
