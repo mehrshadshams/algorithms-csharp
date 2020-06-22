@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{2A74ABE4-BD56-42B8-AF4C-F612BDE277CB}</ProjectGuid>
+        <OutputType>Exe</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>AIMA</RootNamespace>
+        <AssemblyName>AIMA</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+          <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Optional, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\packages\Optional.5.0.0-alpha\lib\net45\Optional.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Agent\AbstractEnvironment.cs" />
+        <Compile Include="Agent\DynamicObject.cs" />
+        <Compile Include="Agent\DynamicPercept.cs" />
+        <Compile Include="Agent\DynamicState.cs" />
+        <Compile Include="Agent\EnvironmentObject.cs" />
+        <Compile Include="Agent\IAction.cs" />
+        <Compile Include="Agent\DynamicAction.cs" />
+        <Compile Include="Agent\IAgent.cs" />
+        <Compile Include="Agent\IEnvironment.cs" />
+        <Compile Include="Agent\IEnvironmentState.cs" />
+        <Compile Include="Agent\IPercept.cs" />
+        <Compile Include="Agent\IState.cs" />
+        <Compile Include="Agent\SimpleAgent.cs" />
+        <Compile Include="ArrayUtils.cs" />
+        <Compile Include="Environments\EightPuzzle\EightPuzzleBoard.cs" />
+        <Compile Include="Environments\EightPuzzle\EightPuzzleProblem.cs" />
+        <Compile Include="Environments\Map\AttNames.cs" />
+        <Compile Include="Environments\Map\BidirectionalMapProblem.cs" />
+        <Compile Include="Environments\Map\ExtendableMap.cs" />
+        <Compile Include="Environments\Map\IMap.cs" />
+        <Compile Include="Environments\Map\MapAgent.cs" />
+        <Compile Include="Environments\Map\MapFunctions.cs" />
+        <Compile Include="Environments\Map\MoveToAction.cs" />
+        <Compile Include="Environments\Map\SimpleMapAgent.cs" />
+        <Compile Include="Environments\Map\SimpleMapOfRomania.cs" />
+        <Compile Include="Environments\NQueens\NQueenAction.cs" />
+        <Compile Include="Environments\NQueens\NQueenBoard.cs" />
+        <Compile Include="Environments\NQueens\NQueenProblem.cs" />
+        <Compile Include="Program.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Search\Agent\ProblemSolvingAgent.cs" />
+        <Compile Include="Search\Agent\SearchAgent.cs" />
+        <Compile Include="Search\Agent\SimpleProblemSolvingAgent.cs" />
+        <Compile Include="Search\Informed\AStarSearch.cs" />
+        <Compile Include="Search\Informed\BestFirstSearch.cs" />
+        <Compile Include="Search\Informed\EvaluationFunction.cs" />
+        <Compile Include="Search\Informed\GreedyBestFirstSearch.cs" />
+        <Compile Include="Search\Informed\IInformedSearch.cs" />
+        <Compile Include="Search\ISearch.cs" />
+        <Compile Include="Search\ISearchStrategy.cs" />
+        <Compile Include="Search\NodeFactory.cs" />
+        <Compile Include="Search\Problem\GeneralProblem.cs" />
+        <Compile Include="Search\Problem\IBidirectionalProblem.cs" />
+        <Compile Include="Search\Problem\Problem.cs" />
+        <Compile Include="Search\QueueBuilder.cs" />
+        <Compile Include="Search\QueueSearch\GraphSearch.cs" />
+        <Compile Include="Search\QueueSearch\QueueBasedSearch.cs" />
+        <Compile Include="Search\QueueSearch\TreeSearch.cs" />
+        <Compile Include="Search\SearchAlgorithmBuilder.cs" />
+        <Compile Include="Search\SearchInterruptedException.cs" />
+        <Compile Include="Search\SearchResult.cs" />
+        <Compile Include="Search\Solution.cs" />
+        <Compile Include="Search\StateNode.cs" />
+        <Compile Include="Search\Uninformed\BreadthFirstSearch.cs" />
+        <Compile Include="Search\Uninformed\DepthFirstSearch.cs" />
+        <Compile Include="Search\Uninformed\DepthLimitedSearch.cs" />
+        <Compile Include="Search\Uninformed\IterativeDeepeningSearch.cs" />
+        <Compile Include="Search\Uninformed\UniformCostSearch.cs" />
+        <Compile Include="Util\LabeledGraph.cs" />
+        <Compile Include="Util\Point2D.cs" />
+        <Compile Include="Util\Util.cs" />
+        <Compile Include="Util\Vector2D.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Include="packages.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Algorithms\AlgorithmsLibrary.csproj">
+        <Project>{820e9aba-cfad-442c-b72e-759aeb975280}</Project>
+        <Name>AlgorithmsLibrary</Name>
+      </ProjectReference>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>

@@ -39,6 +39,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataStructures\SparseTableTests.cs" />
+    <Compile Include="DataStructures\VanEmdeBoasTests.cs" />
+    <Compile Include="DataStructures\PriorityQueueTests.cs" />
+    <Compile Include="DataStructures\ArrayDequeTests.cs" />
+    <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Algorithms\AlgorithmsLibrary.csproj">

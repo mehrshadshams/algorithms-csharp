@@ -25,9 +25,9 @@ namespace algorithms.Algorithms.DataStructures
         // The operation this instance supports
         private readonly Operation operation;
 
-        private int[] log2;
+        private readonly int[] log2;
 
-        private long[,] dp;
+        private readonly long[,] dp;
 
         private readonly Dictionary<Operation, Func<long, long, long>> operationFuncs = new Dictionary<Operation, Func<long, long, long>>
         {
